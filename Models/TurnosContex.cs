@@ -9,5 +9,6 @@ namespace Turnos.Models
 
         }
         public DbSet<Especialidad> Especialidad { get; set; }
+
     }
 }
