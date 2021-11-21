@@ -14432,6 +14432,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\a\\ProyectosMVC\\Turnos\\Views\\Especialidad\\Edit.cshtml",
+      "TargetPath": "Views\\Especialidad\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\a\\ProyectosMVC\\Turnos\\Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"

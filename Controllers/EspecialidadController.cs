@@ -33,5 +33,22 @@ namespace Turnos.Controllers
             return View(Especialidad);
         }
 
+        [HttpPost]
+        public IActionResult Edit(int id, [Bind("IdEspecialidad,Descripccion")] Especialidad especialidad)
+        {
+            if (id != especialidad.IdEspecialidad)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                _context.Update(especialidad);
+                _context.SaveChanges();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(especialidad);
+        }
+
     }
 }
