@@ -14402,6 +14402,11 @@
   "RootNamespace": "Turnos",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\a\\ProyectosMVC\\Turnos\\Views\\Especialidad\\Delect.cshtml",
+      "TargetPath": "Views\\Especialidad\\Delect.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\a\\ProyectosMVC\\Turnos\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"

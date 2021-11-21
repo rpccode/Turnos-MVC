@@ -65,3 +65,5 @@ C:\Users\a\ProyectosMVC\Turnos\obj\Debug\netcoreapp3.1\Turnos.Views.pdb
 C:\Users\a\ProyectosMVC\Turnos\obj\Debug\netcoreapp3.1\Turnos.csproj.CopyComplete
 C:\Users\a\ProyectosMVC\Turnos\obj\Debug\netcoreapp3.1\Turnos.dll
 C:\Users\a\ProyectosMVC\Turnos\obj\Debug\netcoreapp3.1\Turnos.pdb
+C:\Users\a\ProyectosMVC\Turnos\obj\Debug\netcoreapp3.1\Razor\Views\Especialidad\Edit.cshtml.g.cs
+C:\Users\a\ProyectosMVC\Turnos\obj\Debug\netcoreapp3.1\Razor\Views\Especialidad\Delect.cshtml.g.cs

@@ -18,6 +18,10 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Descripccion)
                 </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.IdEspecialidad">Editar</a>
+                    <a asp-action="Delect" asp-route-id="@item.IdEspecialidad">eliminar</a>
+                </td>
             </tr>
         }
 
