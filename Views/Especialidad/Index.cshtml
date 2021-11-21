@@ -1,3 +1,5 @@
+@model IEnumerable<Turnos.Models.Especialidad>
+
 <!DOCTYPE html>
 
 <html lang="en" xml:lang="en">
@@ -10,14 +12,25 @@
     <table class="table table-light">
         <thead class="thead-light">
             <tr>
-                <th scope="col">Descripccion</th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Descripccion)
+                </th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 @*aqui se colocara el codigo de la tabla para mostrar la information de la base de datos*@
+                @foreach (var item in collection)
+                {
+
+                }
                 <td>
                     Traumatologo
+                </td>
+            </tr>
+            <tr>
+                <td>
+
                 </td>
             </tr>
         </tbody>
