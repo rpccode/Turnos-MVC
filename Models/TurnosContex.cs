@@ -9,6 +9,8 @@ namespace Turnos.Models
 
         }
         public DbSet<Especialidad> Especialidad { get; set; }
+        public DbSet<Paciente> Paciente { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Especialidad>(Entidad =>
