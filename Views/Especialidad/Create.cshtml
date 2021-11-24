@@ -1,7 +1,20 @@
-namespace Turnos.Views.Especialidad
-{
-    public class Create
-    {
-        
-    }
-}
+@model Turnos.Models.Especialidad
+
+<h4>Especialidad</h4>
+
+<div>
+    <form asp-action="Create">
+        <div asp-validation-summary="ModelOnly"></div>
+        <div>
+            <label asp-for="Descripccion"></label>
+            <input asp-for="Descripccion" class="form-control" type="text">
+            <span asp-validation-for="Descripccion"></span>
+        </div>
+        <div>
+            <input class="form-control" type="Submit">
+        </div>
+    </form>
+</div>
+<div>
+    <a asp-action="Index"> Volver </a>
+</div>
