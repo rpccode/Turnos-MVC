@@ -13,14 +13,48 @@ namespace Turnos.Models
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<Especialidad>(Entidad =>
+            builder.Entity<Especialidad>(entidad =>
             {
-                Entidad.ToTable("Especialidad");
+                entidad.ToTable("Especialidad");
 
-                Entidad.HasKey(e => e.IdEspecialidad);
+                entidad.HasKey(e => e.IdEspecialidad);
 
-                Entidad.Property(e => e.Descripccion).IsRequired().HasMaxLength(200)
+                entidad.Property(e => e.Descripccion).IsRequired().HasMaxLength(200)
                 .IsUnicode(false);
+            });
+
+            builder.Entity<Paciente>(entidad =>
+            {
+
+                entidad.ToTable("Paciente");
+
+                entidad.HasKey(e => e.IdPaciente);
+
+                entidad.Property(e => e.Nombre).IsRequired()
+                .HasMaxLength(50)
+                .IsUnicode(false);
+
+                entidad.Property(e => e.Apellidos).IsRequired()
+                .HasMaxLength(50)
+                .IsUnicode(false);
+
+                entidad.Property(e => e.Direccion).IsRequired()
+                .HasMaxLength(250)
+                .IsUnicode(false);
+
+                entidad.Property(e => e.Telefono).IsRequired()
+                .HasMaxLength(20)
+                .IsUnicode(false);
+
+
+                entidad.Property(e => e.Email).IsRequired()
+                .HasMaxLength(100)
+                .IsUnicode(false);
+
+
+
+
+
             });
         }
     }
