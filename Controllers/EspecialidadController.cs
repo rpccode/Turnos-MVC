@@ -77,6 +77,26 @@ namespace Turnos.Controllers
         }
 
 
+        public ActionResult Create()
+        {
+
+
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create([Bind("IdEspecialidad,Descripccion")] Especialidad especialidad)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(especialidad);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(especialidad);
+        }
+
+
 
     }
 }

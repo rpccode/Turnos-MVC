@@ -70,3 +70,4 @@ C:\Users\a\ProyectosMVC\Turnos\obj\Debug\netcoreapp3.1\Turnos.GeneratedMSBuildEd
 C:\Users\a\ProyectosMVC\Turnos\obj\Debug\netcoreapp3.1\Turnos.csproj.CoreCompileInputs.cache
 C:\Users\a\ProyectosMVC\Turnos\obj\Debug\netcoreapp3.1\scopedcss\bundle\Turnos.styles.css
 C:\Users\a\ProyectosMVC\Turnos\obj\Debug\netcoreapp3.1\Turnos.genruntimeconfig.cache
+C:\Users\a\ProyectosMVC\Turnos\obj\Debug\netcoreapp3.1\Razor\Views\Especialidad\Create.cshtml.g.cs
