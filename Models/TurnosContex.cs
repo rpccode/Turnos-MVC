@@ -9,6 +9,17 @@ namespace Turnos.Models
 
         }
         public DbSet<Especialidad> Especialidad { get; set; }
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.Entity<Especialidad>(Entidad =>
+            {
+                Entidad.ToTable("Especialidad");
 
+                Entidad.HasKey(e => e.IdEspecialidad);
+
+                Entidad.Property(e => e.Descripccion).IsRequired().HasMaxLength(200)
+                .IsUnicode(false);
+            });
+        }
     }
 }
