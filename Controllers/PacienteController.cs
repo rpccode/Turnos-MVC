@@ -94,6 +94,47 @@ namespace Turnos.Controllers
 
         }
 
+        public async Task<IActionResult> Delect(int? id)
+        {
+
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var paciente = await _context.Paciente.FirstOrDefaultAsync(p => p.IdPaciente == id);
+            if (paciente == null)
+            {
+                return NotFound();
+            }
+
+            return View(paciente);
+
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DelectConfirmed(int? id)
+        {
+
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var paciente = await _context.Paciente.FindAsync(id);
+            if (paciente == null)
+            {
+                return NotFound();
+            }
+            _context.Paciente.Remove(paciente);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+
+        }
+
+
     }
 
 }
