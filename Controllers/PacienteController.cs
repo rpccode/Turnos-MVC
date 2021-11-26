@@ -36,7 +36,64 @@ namespace Turnos.Controllers
 
         }
 
+        public ActionResult Create()
+        {
 
+
+            return View();
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("IdPaciente,Nombre,Apellidos,Direccion,Telefono,Email")] Paciente paciente)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(paciente);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+
+            }
+            return View(paciente);
+        }
+
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var paciente = await _context.Paciente.FindAsync(id);
+
+            if (paciente == null)
+            {
+                return NotFound();
+            }
+
+            return View(paciente);
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, [Bind("IdPaciente,Nombre,Apellidos,Direccion,Telefono,Email")] Paciente paciente)
+        {
+            if (id != paciente.IdPaciente)
+            {
+                return NotFound();
+            }
+            if (ModelState.IsValid)
+            {
+                _context.Update(paciente);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(paciente);
+
+        }
 
     }
+
 }
