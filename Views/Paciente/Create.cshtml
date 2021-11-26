@@ -1,0 +1,40 @@
+@model Turnos.Models.Paciente
+
+<h4>Paciente</h4>
+
+<div class="form-group">
+    <form asp-action="Create">
+        <div asp-validation-summary="ModelOnly"></div>
+        <div>
+            <label asp-for="Nombre"></label>
+            <input asp-for="Nombre" class="form-control" type="text">
+            <span asp-validation-for="Nombre"></span>
+        </div>
+        <div>
+            <label asp-for="Apellidos"></label>
+            <input asp-for="Apellidos" class="form-control" type="text">
+            <span asp-validation-for="Apellidos"></span>
+        </div>
+        <div>
+            <label asp-for="Direccion"></label>
+            <input asp-for="Direccion" class="form-control" type="text">
+            <span asp-validation-for="Direccion"></span>
+        </div>
+        <div>
+            <label asp-for="Telefono"></label>
+            <input asp-for="Telefono" class="form-control" type="text">
+            <span asp-validation-for="Telefono"></span>
+        </div>
+        <div>
+            <label asp-for="Email"></label>
+            <input asp-for="Email" class="form-control" type="text">
+            <span asp-validation-for="Email"></span>
+        </div>
+        <div>
+            <input class="form-control" type="Submit">
+        </div>
+    </form>
+</div>
+<div>
+    <a asp-action="Index"> Volver </a>
+</div>

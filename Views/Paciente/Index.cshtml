@@ -1,0 +1,59 @@
+@model IEnumerable<Turnos.Models.Paciente>
+
+<p>
+    <a asp-action="Create">Nuevo</a>
+</p>
+<table>
+    <thead>
+        <tr>
+
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Apellidos)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Direccion)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Telefono)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @*aqui se colocara el codigo de la tabla para mostrar la information de la base de datos*@
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Apellidos)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Direccion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telefono)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.IdPaciente">Editar</a>
+                    <a asp-action="Details" asp-route-id="@item.IdPaciente">Detalles</a>
+                    <a asp-action="Delect" asp-route-id="@item.IdPaciente">eliminar</a>
+                </td>
+
+            </tr>
+        }
+
+    </tbody>
+</table>
