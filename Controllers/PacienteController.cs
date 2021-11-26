@@ -112,7 +112,7 @@ namespace Turnos.Controllers
 
         }
 
-        [HttpPost, ActionName("Delete")]
+        [HttpPost, ActionName("Delect")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DelectConfirmed(int? id)
         {

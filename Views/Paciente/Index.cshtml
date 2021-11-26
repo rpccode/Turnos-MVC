@@ -3,8 +3,8 @@
 <p>
     <a asp-action="Create">Nuevo</a>
 </p>
-<table>
-    <thead>
+<table class="table">
+    <thead class="table-dark">
         <tr>
 
             <th scope="col">
@@ -22,6 +22,9 @@
             <th scope="col">
                 @Html.DisplayNameFor(model => model.Email)
             </th>
+            <th scope="col">
+                Acciones
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -29,7 +32,9 @@
         @*aqui se colocara el codigo de la tabla para mostrar la information de la base de datos*@
         @foreach (var item in Model)
         {
+
             <tr>
+
                 <td>
                     @Html.DisplayFor(modelItem => item.Nombre)
                 </td>
