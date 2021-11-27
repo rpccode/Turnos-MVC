@@ -11,6 +11,7 @@ namespace Turnos.Models
         }
         public DbSet<Especialidad> Especialidad { get; set; }
         public DbSet<Paciente> Paciente { get; set; }
+        public DbSet<Medico> Medico { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -57,8 +58,49 @@ namespace Turnos.Models
 
 
             });
+
+            builder.Entity<Medico>(entidad =>
+            {
+                entidad.ToTable("Medico");
+
+                entidad.HasKey(e => e.IdMedico);
+
+                entidad.Property(e => e.Nombre).IsRequired()
+            .HasMaxLength(50)
+            .IsUnicode(false);
+
+                entidad.Property(e => e.Apellidos).IsRequired()
+                .HasMaxLength(50)
+                .IsUnicode(false);
+
+                entidad.Property(e => e.Direccion).IsRequired()
+                .HasMaxLength(250)
+                .IsUnicode(false);
+
+                entidad.Property(e => e.Telefono).IsRequired()
+                .HasMaxLength(20)
+                .IsUnicode(false);
+
+
+                entidad.Property(e => e.Email).IsRequired()
+                .HasMaxLength(100)
+                .IsUnicode(false);
+
+                entidad.Property(e => e.HorarioAtencionDesde)
+                .IsRequired()
+                 .IsUnicode(false);
+
+                entidad.Property(e => e.HorarioAtencionHasta)
+             .IsRequired()
+              .IsUnicode(false);
+
+
+
+
+
+            });
         }
 
-        public DbSet<Turnos.Models.Medico> Medico { get; set; }
+
     }
 }
