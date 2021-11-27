@@ -14402,6 +14402,11 @@
   "RootNamespace": "Turnos",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\a\\ProyectosMVC\\Turnos\\Views\\Medico\\Edit.cshtml",
+      "TargetPath": "Views\\Medico\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\a\\ProyectosMVC\\Turnos\\Views\\Especialidad\\Delect.cshtml",
       "TargetPath": "Views\\Especialidad\\Delect.cshtml",
       "FileKind": "mvc"
@@ -14427,6 +14432,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\a\\ProyectosMVC\\Turnos\\Views\\Medico\\Create.cshtml",
+      "TargetPath": "Views\\Medico\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\a\\ProyectosMVC\\Turnos\\Views\\Paciente\\Create.cshtml",
       "TargetPath": "Views\\Paciente\\Create.cshtml",
       "FileKind": "mvc"
@@ -14442,8 +14452,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\a\\ProyectosMVC\\Turnos\\Views\\Medico\\Index.cshtml",
+      "TargetPath": "Views\\Medico\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\a\\ProyectosMVC\\Turnos\\Views\\Especialidad\\Index.cshtml",
       "TargetPath": "Views\\Especialidad\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\a\\ProyectosMVC\\Turnos\\Views\\Medico\\Delete.cshtml",
+      "TargetPath": "Views\\Medico\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14474,6 +14494,11 @@
     {
       "FilePath": "c:\\Users\\a\\ProyectosMVC\\Turnos\\Views\\Paciente\\Edit.cshtml",
       "TargetPath": "Views\\Paciente\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\a\\ProyectosMVC\\Turnos\\Views\\Medico\\Details.cshtml",
+      "TargetPath": "Views\\Medico\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
