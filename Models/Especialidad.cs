@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Turnos.Models
@@ -7,5 +8,7 @@ namespace Turnos.Models
         [Key]
         public int IdEspecialidad { get; set; }
         public string Descripccion { get; set; }
+
+        public List<MedicoEspecialidad> MedicoEspecialidad { get; set; }
     }
 }
