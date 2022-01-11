@@ -8205,11 +8205,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\a\\ProyectosMVC\\Turnos\\Turnos.csproj",
+      "projectUniqueName": "C:\\Users\\a\\ProyectosMVC\\Turnos\\Turnos.csproj",
       "projectName": "Turnos",
-      "projectPath": "c:\\Users\\a\\ProyectosMVC\\Turnos\\Turnos.csproj",
+      "projectPath": "C:\\Users\\a\\ProyectosMVC\\Turnos\\Turnos.csproj",
       "packagesPath": "C:\\Users\\a\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\a\\ProyectosMVC\\Turnos\\obj\\",
+      "outputPath": "C:\\Users\\a\\ProyectosMVC\\Turnos\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\WPF\\19.3.0.43\\ToolboxNuGetPackages",
@@ -8279,7 +8279,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
       }
     }
   }

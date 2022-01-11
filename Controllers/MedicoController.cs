@@ -45,6 +45,7 @@ namespace Turnos.Controllers
         // GET: Medico/Create
         public IActionResult Create()
         {
+            ViewData["ListaEspecialidades"] = new SelectList(_context.Especialidad, "IdEspecialidad", "Descripccion");
             return View();
         }
 
@@ -53,11 +54,17 @@ namespace Turnos.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdMedico,Nombre,Apellidos,Direccion,Telefono,Email,HorarioAtencionDesde,HorarioAtencionHasta")] Medico medico)
+        public async Task<IActionResult> Create([Bind("IdMedico,Nombre,Apellidos,Direccion,Telefono,Email,HorarioAtencionDesde,HorarioAtencionHasta")] Medico medico, int IdEspecialidad)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(medico);
+                await _context.SaveChangesAsync();
+
+                var MedicoEspecialidad = new MedicoEspecialidad();
+                MedicoEspecialidad.IdMedico = medico.IdMedico;
+                MedicoEspecialidad.IdEspecialidad = IdEspecialidad;
+                _context.Add(MedicoEspecialidad);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
